@@ -1,0 +1,206 @@
+/* ----- Header global ----- */
+.site-header{
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  gap:16px;
+  height:auto; 
+  padding:12px 16px;
+  background-color: var(--color-primary);
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+  position:sticky; 
+  top:0; 
+  z-index:10;
+}
+
+/* ----- Brand (logo + titre) ----- */
+.brand{ 
+  flex:1 1 200px; 
+  display:flex; 
+  align-items:center; 
+  flex-wrap:wrap; 
+  gap:8px;
+}
+
+.brand img{ 
+  width:48px;
+  height:48px;
+  display:block; 
+}
+
+.brand h1{ 
+  margin:0; 
+  font-size:24px; 
+  line-height:1; 
+}
+
+/* ----- Nav centrée ----- */
+.nav{ 
+  flex:1 1 300px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:flex-end; 
+  gap:12px; 
+}
+
+.menu{
+  list-style:none; 
+  display:flex; 
+  justify-content:center;
+  flex-wrap:wrap; 
+  gap:8px;
+  margin:0; 
+  padding:0; 
+}
+.menu a{
+  display:inline-block; 
+  text-decoration:none; 
+  color:inherit;
+  font-size:14px; 
+  line-height:1; 
+  padding:6px 8px;
+  border-radius:8px;
+  transition:color .2s ease, background-color .2s ease, transform .2s ease;
+}
+.menu a:hover{ font-weight:600; }
+
+/* ----- Actions à droite ----- */
+.actions{ 
+  display:flex; 
+  justify-content:flex-end; 
+  gap:8px; 
+}
+
+.actions .btn, .actions a.btn{
+  text-decoration:none; 
+  font-size:14px; 
+  background: var(--color-secondary); 
+  color: var(--color-text);
+  font-weight:500;
+  padding:8px 12px; 
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+.actions a.btn:hover{ font-weight:600; } */
+
+/* ================= Burger (CSS only) ================= */
+
+/* Desktop (>=640px) : bouton caché, menu visible */
+.nav > .menu{ 
+  display:flex; 
+}
+.nav .burger-btn{ 
+  display:none; 
+}
+
+/* Mobile (<=640px) */
+@media (max-width:640px){
+
+  .site-header{ 
+    flex-direction:column; 
+    align-items:stretch; 
+    gap:8px; 
+  }
+  .brand, .nav, .actions{ 
+    flex:none;
+    justify-content:center;
+  }
+  .brand{ 
+    order:1;
+  } 
+  .nav{ 
+    order:2;
+    width:100%;
+  } 
+  .actions{ 
+    order:3;
+  }
+
+    /* Bouton burger visible */
+  .burger-btn{
+    display:flex; 
+    align-items:center; 
+    gap:8px; 
+    cursor:pointer; 
+    user-select:none;
+    padding:10px 12px; 
+    border-radius:10px; 
+    transition:background-color .2s ease;
+  }
+
+  .burger-btn:hover{ 
+    background:rgba(0,0,0,.06); 
+  }
+  .burger-btn:focus-visible{ 
+    outline:2px solid #000;
+    outline-offset:2px;
+    border-radius:10px;
+  }
+  .burger-btn::-webkit-details-marker{ 
+    display:none; 
+  }
+  .burger-btn::marker{ 
+    content:""; 
+  }
+
+    /* Icône hamburger (3 barres) */
+  .burger-icon{
+    position:relative; 
+    width:22px; 
+    height:2px; 
+    background:currentColor; 
+    display:inline-block;
+    transition:transform .2s ease, background-color .2s ease;
+  }
+
+  .burger-icon::before,
+  .burger-icon::after{
+    content:""; 
+    position:absolute; 
+    left:0; 
+    width:22px; 
+    height:2px; 
+    background:currentColor;
+    transition:transform .2s ease, top .2s ease, opacity .2s ease;
+  }
+
+  .burger-icon::before{ 
+    top:-6px; 
+  }
+  .burger-icon::after{  
+    top: 6px;
+  }
+
+  .burger-text{ 
+    font-weight:600; 
+  }
+
+  /* Menu caché par défaut en mobile */
+  .nav .burger-btn { 
+    display: flex; 
+  }
+
+  .nav > .menu {
+    display:none;
+    flex-direction:column; 
+    gap:8px;
+    margin-top:8px; 
+    padding:8px 0;
+  }
+
+  /* Quand <details> est ouvert, on affiche le SIBLING .menu */
+  .burger[open] + .menu { 
+    display:flex; 
+  }
+
+  /* Icône en "X" quand ouvert */
+  .burger[open] .burger-icon{ 
+    background:transparent; 
+  }
+  .burger[open] .burger-icon::before{ 
+    transform:rotate(45deg); top:0;
+  }
+  .burger[open] .burger-icon::after{  
+    transform:rotate(-45deg); top:0; 
+  }
+}

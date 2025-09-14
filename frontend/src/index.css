@@ -1,0 +1,62 @@
+/* === Import Google Fonts (Radley + Montserrat) === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Radley:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* === Font-face Arturo (police locale) === */
+@font-face {
+  font-family: 'Arturo';
+  src: url('../public/fonts/Arturo-Regular\ Trial.ttf') format('truetype'); /* placer ton fichier dans public/fonts/ */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === Tailwind layers === */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Variables globales === */
+:root {
+  --font-title: 'Arturo', serif;
+  --font-subtitle: 'Radley', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  --color-primary: #C5EBFC;      /* Bleu ciel doux */
+  --color-secondary: #EDE1C5;    /* Sable chaud */
+  --color-accent: #FFA89F;  
+  --color-accent-rgb: 255, 168, 159;     /* Corail doux */
+  --color-text: #333333;         /* Gris foncé */
+  --color-background: #F9F9F6;   /* Blanc cassé */
+}
+
+/* === Styles globaux === */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+}
+
+body, #root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+html, body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+/* Titres */
+h1, h2 {
+  font-family: var(--font-title);
+}
+
+h3, h4 {
+  font-family: var(--font-subtitle);
+}

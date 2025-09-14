@@ -1,0 +1,117 @@
+/* === FOOTER GLOBAL === */
+.site-footer {
+  background-color: var(--color-primary);  /* fond bleu ciel doux */
+  color: var(--color-text);               /* texte gris foncé */
+  font-size: 14px;
+  margin-top: auto; /* sticky bottom si peu de contenu */
+  padding: 32px 16px 0;
+  box-shadow:2px 2px 6px rgba(0,0,0,.06);
+}
+
+/* === STRUCTURE EN COLONNES === */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === COLONNE LOGO + DESCRIPTION === */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-logo {
+  width: 48px;
+  height: auto;
+}
+.footer-desc {
+  line-height: 1.6;
+  font-size: 14px;
+  max-width: 300px;
+  color: var(--color-text);
+}
+
+/* === TITRES === */
+.footer-title {
+  font-family: var(--font-subtitle);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+.footer-sub {
+  margin-top: 12px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* === LIENS TEXTE === */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-col a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.2s ease;
+}
+.footer-col a:hover {
+  color: var(--color-accent); /* corail doux */
+}
+
+/* === RÉSEAUX SOCIAUX (logos en ligne) === */
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-icons li {
+  display: flex;
+  align-items: center;
+}
+.footer-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-icons a img {
+  transition: transform 0.2s ease;
+}
+.footer-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* === BAS DE PAGE (copyright) === */
+.footer-bottom {
+  border-top: 1px solid var(--color-secondary); /* sable chaud pour adoucir */
+  text-align: center;
+  padding: 16px 0;
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+/* === POUR FOOTER STICKY === */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
