@@ -1,10 +1,10 @@
 .form-group {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
     gap: 4px;
-    margin-bottom: 16px;
+    margin: 10px 25px;
+    padding: 0 35px;
 }
 
 .form-label {

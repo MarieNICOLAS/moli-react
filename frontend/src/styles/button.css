@@ -1,0 +1,54 @@
+/* Zone actions (utile pour centrer les boutons d’un form) */
+.form-actions {
+  margin: 15px 60px 15px 15px;
+  display: flex;
+  justify-content: end;
+}
+
+/* Bouton primaire (corail doux de ta charte) */
+.btn-primary {
+  background: var(--color-accent);  /* #FFA89F */
+  color: white;                     /* contraste fort */
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .15s ease;
+  min-width: 220px;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: #ff8a75; /* corail plus foncé */
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Bouton désactivé (ex. état loading) */
+.btn-disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Bouton secondaire (ex. popup cookies "Refuser") */
+.btn-secondary {
+  background: var(--color-secondary); /* sable chaud */
+  color: var(--color-text);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .15s ease;
+}
+
+.btn-secondary:hover {
+  background: #d6c8a5; /* sable un peu plus foncé */
+  transform: translateY(-1px);
+}

@@ -9,6 +9,7 @@ interface FormInputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>)=> void;
     placeholder?: string;
     required?: boolean;
+    error: string;
 }
 
 const FormInput: React.FC<FormInputProps> = ({
@@ -18,22 +19,23 @@ const FormInput: React.FC<FormInputProps> = ({
     value,
     onChange,
     placeholder = "",
-    required = false
+    required = false,
 }) => {
     return (
-        <div className="form-group">
-            <label htmlFor={name} className="form-label">{label}</label>
-            <input
-                id={name}   
-                name={name}
-                type={type}
-                value={value}
-                onChange={onChange}
-                placeholder={placeholder}
-                required={required}
-                className="form-input"
-            />
-        </div>
+        
+            <div className="form-group">
+                <label htmlFor={name} className="form-label">{label}</label>
+                <input
+                    id={name}   
+                    name={name}
+                    type={type}
+                    value={value}
+                    onChange={onChange}
+                    placeholder={placeholder}
+                    required={required}
+                    className="form-input"
+                />
+            </div>
     );
 };
 

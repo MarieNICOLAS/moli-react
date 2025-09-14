@@ -5,27 +5,31 @@
   display: flex;
   justify-content: center;
   padding: 48px 16px; /* resp */
+  min-height: 100vh;
 }
 
 /* Carte/formulaire: largeur max + ombre légère */
 .auth-card {
   width: 100%;
   max-width: 500px;
-  height: 75vh;
+  min-height: 60vh;
   background: color-mix(in srgb, var(--color-accent) 25%, transparent);  /* corail doux */
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 6px 18px rgba(var(--color-accent-rgb), 0.25);
+  
 }
 
 /* Titre */
-.auth-title {
+.auth-title h1{
   text-align: center;
   font-family: var(--font-title);
   color: var(--color-text);
-  margin: 20px;
-  font-size: 32px;
+  margin: 16px 0px;
+  padding: 15px 25px;
+  font-size: 24px;
 }
+
 
 /* Espace vertical entre les groupes du form (les inputs sont déjà stylés via form.css) */
 .auth-form {
@@ -34,35 +38,4 @@
   padding-top: 20px;
   margin: 10px;
   gap: 8px;
-}
-
-/* Zone actions */
-.form-actions {
-  margin-top: 12px;
-  display: flex;
-  justify-content: center;
-}
-
-/* Bouton primaire (cohérent charte) */
-.btn-primary {
-  background: var(--color-accent);     /* bleu ciel */
-  color: var(--color-text);             /* texte gris foncé */
-  border: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color .2s ease, transform .15s ease;
-  min-width: 220px;
-  text-align: center;
-}
-
-.btn-primary:hover {
-  background: #94c9ec;                  /* bleu ciel un peu plus foncé */
-  transform: translateY(-1px);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
 }

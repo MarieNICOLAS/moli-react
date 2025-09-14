@@ -14,7 +14,7 @@ const LoginPage: React.FC = () => {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <h1 className="auth-title">Connexion</h1>
+        <div className="auth-title"><h1>Connexion</h1></div>
         
         <form onSubmit={handleSubmit} className="auth-form">
           <FormInput
@@ -25,6 +25,7 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="exemple@mail.com"
             required
+            error=""
           />
 
           <FormInput
@@ -35,6 +36,7 @@ const LoginPage: React.FC = () => {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="**********"
             required
+            error=""
           />
 
           <div className="form-actions">
