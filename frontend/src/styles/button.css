@@ -38,17 +38,21 @@
 
 /* Bouton secondaire (ex. popup cookies "Refuser") */
 .btn-secondary {
-  background: var(--color-secondary); /* sable chaud */
-  color: var(--color-text);
+  background: var(--color-accent); /* sable chaud */
+  color: white;
   border: none;
   padding: 10px 16px;
   border-radius: 8px;
   font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color .2s ease, transform .15s ease;
+  box-shadow: 0 6px 18px rgba(var(--color-secondary), 0.25); /* ombre légère */
+
 }
 
 .btn-secondary:hover {
-  background: #d6c8a5; /* sable un peu plus foncé */
+  background: #ff8a75; 
   transform: translateY(-1px);
 }

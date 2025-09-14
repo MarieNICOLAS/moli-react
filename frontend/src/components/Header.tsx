@@ -1,4 +1,5 @@
 import "../styles/header.css";
+import "../styles/button.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
@@ -20,11 +21,11 @@ export default function Header() {
                 {user ? (
                     <>
                         <Link to="/cart" className="btn">🛒</Link>
-                        <button onClick={logout} className="btn">Déconnexion</button>
+                        <button onClick={logout} className="btn-secondary">Déconnexion</button>
                     </>
                 ) : (
                     <>
-                        <Link to="/login" className="btn">Se connecter</Link>
+                        <Link to="/login" className="btn-secondary">Se connecter</Link>
                     </>
                 )}
             </div>
