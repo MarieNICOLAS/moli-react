@@ -2,7 +2,7 @@ import "../styles/header.css";
 import "../styles/button.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
-import { useAuth } from "../contexts/AuthContext";
+import { useAuth } from "../hooks/useAuth";
 
 
 export default function Header() {
