@@ -44,6 +44,14 @@ const LoginPage: React.FC = () => {
               Se connecter
             </button>
           </div>
+          <div className="form-redirect">
+              <p>
+                  Pas de compte ?{' '}
+                  <a href="/signup" className="link">
+                      S'inscrire
+                  </a>
+              </p>
+          </div>
         </form>
       </div>
     </div>

@@ -59,14 +59,12 @@ const SignupPage: React.FC = () => {
         } else if (formData.password.length < 6) {
             newErrors.password = "Le mot de passe doit contenir au moins 6 caractères";
         }
-    
         if (formData.password !== formData.confirmPassword) {
             newErrors.confirmPassword = "Les mots de passe ne correspondent pas";
         }
     
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-    
     }
 
     //Soumission du formulaire
